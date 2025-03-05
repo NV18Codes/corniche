@@ -70,7 +70,17 @@
         </div>
     </div>
     <!-- Topbar End -->
-
+     <!-- nav bar start -->
+<style>
+    .mobile-phone{
+        display: none;
+    }
+    @media screen and (max-width:850px) {
+        .mobile-phone{
+            display: block;
+        }
+    }
+</style>
 
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
@@ -98,6 +108,9 @@
             </div>
         </div>
         <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
+        <a class="mobile-phone" href="contact.html">
+            <img src="img/index/call.png" alt="">
+        </a>
     </nav>
 
 
