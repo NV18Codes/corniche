@@ -514,7 +514,7 @@ progress {
 
 .display-3 {
     font-size: calc(1.525rem + 3.3vw);
-    font-weight: 700;
+    font-weight: 100;
     line-height: 1.2
 }
 
@@ -639,8 +639,8 @@ progress {
 .container-xl,
 .container-xxl {
     width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
+    /* padding-right: var(--bs-gutter-x, .01rem); */
+    /* padding-left: var(--bs-gutter-x, .01rem); */
     margin-right: auto;
     margin-left: auto
 }
