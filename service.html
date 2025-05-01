@@ -128,8 +128,7 @@
         <div class="container py-2">
             <h1 class="display-4 animated slideInDown mb-4">Services</h1>
             <p class="fw-bold text-3xl text-primary">Empowering You with Reliable & Quality Services.</p>
-            <img class="img-fluid mt-4" src="https://cdn.pixabay.com/photo/2017/07/09/03/19/home-2486092_1280.jpg"
-                alt="" width="800px">
+           
             <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -143,152 +142,125 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="mx-auto text-center"
-                style="max-width: 900px; box-shadow: 10px 10px 20px rgba(1, 40, 53, 0.4); border-radius: 20px; padding: 2rem; background: #f5f5f5;">
-                <p style="color: #333; line-height: 1.8; font-size: 1rem;">
-                    At Corniche Infracon Pvt. Ltd., we deliver innovative infrastructure solutions across
-                    various industries, blending functionality, sustainability, and modern design.
-                </p>
-                <ul style="text-align: left; padding-left: 1rem; list-style: none;">
-                    <li>✅ Industrial Infrastructure – High-efficiency production units with advanced engineering.</li>
-                    <li>✅ Renewable Energy – Eco-friendly energy projects promoting green living.</li>
-                    <li>✅ Pharmaceutical Facilities – GMP-compliant units ensuring precision and hygiene.</li>
-                    <li>✅ Hospitality Projects – Luxury resorts and commercial spaces with elegance.</li>
-                    <li>✅ Office & Retail Spaces – Modern, dynamic environments for business growth.</li>
-                    <li>✅ Turnkey Construction – Complete project management from design to delivery.</li>
-                </ul>
-                <p style="margin-top: 1rem; color: #15233C; font-weight: 500;">
-                    We build future-ready infrastructure with a commitment to quality, safety, and
-                    sustainability.
-                </p>
-            </div>
+    <style>
+        .image-box {
+          position: relative;
+          width: 500px;
+          height: 300px;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          cursor: pointer;
+        }
+    
+        .image-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: opacity 0.4s ease;
+        }
+    
+        .image-box .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: rgb(0, 0, 0);
+          background-color: rgba(211, 209, 209, 0.253);
+          opacity: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: opacity 0.4s ease;
+          text-align: center;
+          padding: 10px;
+        }
+    
+        .image-box:hover img {
+          opacity: 0.3;
+        }
+    
+        .image-box:hover .content {
+          opacity: 1;
+        }
+      </style>
+    <div style="display: flex; gap: 1rem;" class="container text-center">
+        <div  class="image-box mx-auto">
+          <img src="img/service/Turnkey Construction.jpg" alt="Sample Image">
+          <div class="content">
+            <h5>Turnkey Construction</h5>
+            <p>Corniche Infracon Pvt Ltd offers comprehensive end-to-end turnkey construction
+                solutions, delivering meticulously executed projects from initial concept to
+                final completion.</p>
+          </div>
         </div>
-        <br>
-        <hr class="bg-white py-2 text-black">
-
-        <div class=" py-5 w-100" style="background-color: rgb(214, 212, 212);">
-            <div class="container">
-                <!-- <div class="text-center mx-auto" style="max-width: 500px;">
-                        <h1 class="display-6 mb-5"> Our Services</h1>
-                        <p>At Corniche Infracon Pvt. Ltd., we offer a full spectrum of services under one roof, ensuring
-                            seamless project execution and unmatched quality: </p>
-                    </div> -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url(img/service/Turnkey\ Construction.jpg); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <div style="position: relative; z-index: 2;">
-                                <h4 style="color: black;" class="mb-0">Turnkey Construction</h4> <br>
-                                <p style="color: black;" class="mb-4">
-                                    Corniche Infracon Pvt Ltd offers comprehensive end-to-end turnkey construction
-                                    solutions, delivering meticulously executed projects from initial concept to
-                                    final completion.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url(img/service/architecture.jpg); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <!-- <div class="d-flex align-items-center ms-n5 mb-4"> -->
-                            <!-- <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4"> -->
-                            <!-- <img class="img-fluid" src="img/icon/icon-01-light.png" alt=""> -->
-                            <!-- </div> -->
-                            <h4 style="color: black;" class="mb-0">Architecture & Interior</h4> <br>
-                            <!-- </div> -->
-                            <p style="color: black;" class="mb-4">At Corniche Infracon Pvt Ltd, we maintain an
-                                unwavering
-                                focus on sustainable and
-                                innovative designs that simultaneously enhance both aesthetic appeal and practical
-                                usability.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url( img/service/Civil\ Construction\ Works.webp); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <!-- <div class="d-flex align-items-center ms-n5 mb-4"> -->
-                            <!-- <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4"> -->
-                            <!-- <img class="img-fluid" src="img/icon/icon-05-light.png" alt=""> -->
-                            <!-- </div> -->
-                            <h4 style="color: black;" class="mb-0">Civil Construction Works</h4> <br>
-                            <!-- </div> -->
-                            <p style="color: black;" class="mb-4">Our construction division is equipped with
-                                cutting-edge
-                                technology and advanced
-                                machinery, complemented by a highly skilled workforce trained in the latest
-                                construction
-                                methodologies.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url(img/service/kitchen.jpg); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <!-- <div class="d-flex align-items-center ms-n5 mb-4"> -->
-                            <!-- <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4"> -->
-                            <!-- <img class="img-fluid" src="img/icon/icon-08-light.png" alt=""> -->
-                            <!-- </div> -->
-                            <h4 style="color: black;" class="mb-0">POP Ceiling Work & Kitchen Design </h4> <br>
-                            <!-- </div> -->
-                            <p style="color: black;" class="mb-4">At Corniche Infracon Pvt Ltd, our POP (Plaster of
-                                Paris)
-                                ceiling work design services
-                                represent the perfect fusion of artistic creativity and technical expertise and
-                                lighting-integrated ceiling solutions</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url(img/service/IT\ &\ Home\ Automation\ Systems.webp); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <!-- <div class="d-flex align-items-center ms-n5 mb-4"> -->
-                            <!-- <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4"> -->
-                            <!-- <img class="img-fluid" src="img/icon/icon-07-light.png" alt=""> -->
-                            <!-- </div> -->
-                            <h4 style="color: black;" class="mb-0">IT & Home Automation Systems</h4> <br>
-                            <!-- </div> -->
-                            <p style="color: black;" class="mb-4">At Corniche Infracon Pvt Ltd, we integrate
-                                cutting-edge IT
-                                and home automation systems to
-                                enhance modern living and working environments, creating spaces that are not just
-                                smart
-                                but intuitively responsive</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded h-100 p-5" style="position: relative; overflow: hidden;">
-                            <div
-                                style="background-image: url(img/service/Lift\ Installation\ &\ HVAC\ Systems.webp); opacity: 0.2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1;">
-                            </div>
-                            <!-- <div class="d-flex align-items-center ms-n5 mb-4"> -->
-                            <!-- <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4"> -->
-                            <!-- <img class="img-fluid" src="img/icon/icon-06-light.png" alt=""> -->
-                            <!-- </div> -->
-                            <h4 style="color: black" class="mb-0">Lift Installation & HVAC Systems</h4> <br>
-                            <!-- </div> -->
-                            <p style="color: black;" class="mb-4">Corniche Infracon Pvt Ltd offers comprehensive
-                                lift
-                                installation and AMC (Annual
-                                Maintenance Contract) services, ensuring seamless vertical mobility and safety in
-                                residential, commercial, and industrial spaces.</p>
-                        </div>
-                    </div>
-                    <a class="btn btn-dark px-3 text-center pt-2" href="contact.html">Reach Us Out</a>
-                </div>
-            </div>
+        <div class="image-box mx-auto">
+          <img src="img/service/architecture.jpg" alt="Sample Image">
+          <div class="content">
+            <h5>Architecture & Interior</h5>
+            <p>At Corniche Infracon Pvt Ltd, we maintain an
+                unwavering
+                focus on sustainable and
+                innovative designs that simultaneously enhance both aesthetic appeal and practical
+                usability.</p>
+          </div>
         </div>
-    </div>
+        <div class="image-box mx-auto">
+          <img src="img/service/Civil Construction Works.webp" alt="Sample Image">
+          <div class="content">
+            <h5>Civil Construction Works</h5>
+            <p>Our construction division is equipped with
+                cutting-edge
+                technology and advanced
+                machinery, complemented by a highly skilled workforce trained in the latest
+                construction
+                methodologies.</p>
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <br>
+      <div style="display: flex; gap: 1rem;" class="container text-center">
+        <div class="image-box mx-auto">
+            <img src="img/service/POP Ceiling Work & Kitchen Design.jpg" alt="Sample Image">
+            <div class="content">
+              <h5>POP Ceiling Work & Kitchen Design</h5>
+              <p>At Corniche Infracon Pvt Ltd, our POP (Plaster of
+                Paris)
+                ceiling work design services
+                represent the perfect fusion of artistic creativity and technical expertise and
+                lighting-integrated ceiling solutions</p>
+            </div>
+          </div>
+          <div class="image-box mx-auto">
+            <img src="img/service/IT & Home Automation Systems.webp" alt="Sample Image">
+            <div class="content">
+              <h5>IT & Home Automation Systems</h5>
+              <p>At Corniche Infracon Pvt Ltd, we integrate
+                cutting-edge IT
+                and home automation systems to
+                enhance modern living and working environments, creating spaces that are not just
+                smart
+                but intuitively responsive</p>
+            </div>
+          </div>
+          <div class="image-box mx-auto">
+            <img src="img/service/Lift Installation & HVAC Systems.webp" alt="Sample Image">
+            <div class="content">
+              <h5>Lift Installation & HVAC Systems</h5>
+              <p>Corniche Infracon Pvt Ltd offers comprehensive
+                lift
+                installation and AMC (Annual
+                Maintenance Contract) services, ensuring seamless vertical mobility and safety in
+                residential, commercial, and industrial spaces.</p>
+            </div>
+          </div>
+      </div>
+   
+   
     </div>
     <!-- Service End -->
     <hr class="bg-white py-2 text-black">
@@ -377,6 +349,7 @@
                     <p>
                         <i class="fa fa-phone-alt me-3"></i>
                         <a href="tel:+919008311119" class="text-light text-decoration-none">+91 90083 11119</a><br>
+                        <i class="fa fa-phone-alt me-3"></i>
                         <a href="tel:+918660162351" class="text-light text-decoration-none">+91 86601 62351</a>
                     </p>
                     <p>
