@@ -128,7 +128,7 @@
         <div class="container py-2">
             <h1 class="display-4 animated slideInDown mb-4">Services</h1>
             <p class="fw-bold text-3xl text-primary">Empowering You with Reliable & Quality Services.</p>
-           
+
             <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -143,130 +143,180 @@
 
     <!-- Service Start -->
     <style>
+        .service-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
         .image-box {
-          position: relative;
-          width: 500px;
-          height: 300px;
-          overflow: hidden;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.2);
-          cursor: pointer;
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: #fff;
+            transition: transform 0.3s ease;
         }
-    
+
+        .image-box:hover {
+            transform: translateY(-5px);
+        }
+
         .image-box img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: opacity 0.4s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
         }
-    
+
         .image-box .content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          color: rgb(0, 0, 0);
-          background-color: rgba(211, 209, 209, 0.253);
-          opacity: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          transition: opacity 0.4s ease;
-          text-align: center;
-          padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
         }
-    
-        .image-box:hover img {
-          opacity: 0.3;
+
+        .image-box:hover img,
+        .image-box.show img {
+            opacity: 0.3;
         }
-    
-        .image-box:hover .content {
-          opacity: 1;
+
+        .image-box:hover .content,
+        .image-box.show .content {
+            opacity: 1;
+            pointer-events: auto;
         }
-      </style>
-    <div style="display: flex; gap: 1rem;" class="container text-center">
-        <div  class="image-box mx-auto">
-          <img src="img/service/Turnkey Construction.jpg" alt="Sample Image">
-          <div class="content">
-            <h5>Turnkey Construction</h5>
-            <p>Corniche Infracon Pvt Ltd offers comprehensive end-to-end turnkey construction
-                solutions, delivering meticulously executed projects from initial concept to
-                final completion.</p>
-          </div>
-        </div>
-        <div class="image-box mx-auto">
-          <img src="img/service/architecture.jpg" alt="Sample Image">
-          <div class="content">
-            <h5>Architecture & Interior</h5>
-            <p>At Corniche Infracon Pvt Ltd, we maintain an
-                unwavering
-                focus on sustainable and
-                innovative designs that simultaneously enhance both aesthetic appeal and practical
-                usability.</p>
-          </div>
-        </div>
-        <div class="image-box mx-auto">
-          <img src="img/service/Civil Construction Works.webp" alt="Sample Image">
-          <div class="content">
-            <h5>Civil Construction Works</h5>
-            <p>Our construction division is equipped with
-                cutting-edge
-                technology and advanced
-                machinery, complemented by a highly skilled workforce trained in the latest
-                construction
-                methodologies.</p>
-          </div>
-        </div>
-        
-      </div>
-      <br>
-      <br>
-      <div style="display: flex; gap: 1rem;" class="container text-center">
-        <div class="image-box mx-auto">
-            <img src="img/service/POP Ceiling Work & Kitchen Design.jpg" alt="Sample Image">
+
+        .image-box h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-box p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-box {
+                height: 220px;
+            }
+
+            .image-box h5 {
+                font-size: 1rem;
+            }
+
+            .image-box p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-box {
+                height: 200px;
+            }
+
+            .image-box .content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+
+    <!-- Service Grid -->
+    <div class="service-wrapper">
+        <div class="image-box">
+            <img src="img/service/Turnkey Construction.jpg" alt="Turnkey Construction">
             <div class="content">
-              <h5>POP Ceiling Work & Kitchen Design</h5>
-              <p>At Corniche Infracon Pvt Ltd, our POP (Plaster of
-                Paris)
-                ceiling work design services
-                represent the perfect fusion of artistic creativity and technical expertise and
-                lighting-integrated ceiling solutions</p>
+                <h5>Turnkey Construction</h5>
+                <p>End-to-end turnkey solutions — from concept to completion — with unmatched precision and quality.</p>
             </div>
-          </div>
-          <div class="image-box mx-auto">
-            <img src="img/service/IT & Home Automation Systems.webp" alt="Sample Image">
+        </div>
+        <div class="image-box">
+            <img src="img/service/architecture.jpg" alt="Architecture & Interior">
             <div class="content">
-              <h5>IT & Home Automation Systems</h5>
-              <p>At Corniche Infracon Pvt Ltd, we integrate
-                cutting-edge IT
-                and home automation systems to
-                enhance modern living and working environments, creating spaces that are not just
-                smart
-                but intuitively responsive</p>
+                <h5>Architecture & Interior</h5>
+                <p>Innovative, sustainable designs that balance beauty with practical usability.</p>
             </div>
-          </div>
-          <div class="image-box mx-auto">
-            <img src="img/service/Lift Installation & HVAC Systems.webp" alt="Sample Image">
+        </div>
+        <div class="image-box">
+            <img src="img/service/Civil Construction Works.webp" alt="Civil Construction">
             <div class="content">
-              <h5>Lift Installation & HVAC Systems</h5>
-              <p>Corniche Infracon Pvt Ltd offers comprehensive
-                lift
-                installation and AMC (Annual
-                Maintenance Contract) services, ensuring seamless vertical mobility and safety in
-                residential, commercial, and industrial spaces.</p>
+                <h5>Civil Construction Works</h5>
+                <p>Advanced machinery and modern techniques led by skilled experts in structural excellence.</p>
             </div>
-          </div>
-      </div>
-   
-   
+        </div>
+        <div class="image-box">
+            <img src="img/service/POP Ceiling Work & Kitchen Design.jpg" alt="POP Ceiling & Kitchen">
+            <div class="content">
+                <h5>POP Ceiling & Kitchen Design</h5>
+                <p>Creative ceilings and modular kitchens that blend form with function and smart lighting.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="img/service/IT & Home Automation Systems.webp" alt="Home Automation">
+            <div class="content">
+                <h5>IT & Home Automation</h5>
+                <p>Smart, responsive environments powered by advanced IT and home automation systems.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="img/service/Lift Installation & HVAC Systems.webp" alt="Lift & HVAC">
+            <div class="content">
+                <h5>Lift & HVAC Systems</h5>
+                <p>Seamless lift installations and efficient HVAC systems for residential and commercial spaces.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS to Enable Tap-to-Reveal on Mobile -->
+    <script>
+        document.querySelectorAll('.image-box').forEach(box => {
+            box.addEventListener('click', function () {
+                // Remove "show" from all other boxes
+                document.querySelectorAll('.image-box').forEach(b => {
+                    if (b !== box) b.classList.remove('show');
+                });
+                // Toggle this one
+                box.classList.toggle('show');
+            });
+        });
+
+        // Optional: Close content when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.image-box')) {
+                document.querySelectorAll('.image-box').forEach(box => box.classList.remove('show'));
+            }
+        });
+    </script>
+
+
     </div>
     <!-- Service End -->
     <hr class="bg-white py-2 text-black">
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto" style="max-width: 500px;">
                 <h1 class="display-6 mb-5">What our Clients Say!</h1>
@@ -322,7 +372,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
