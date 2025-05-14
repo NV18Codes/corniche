@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Corniche-Infra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img\logo-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav bar start -->
+    <style>
+        .mobile-phone {
+            display: none;
+        }
+
+        @media screen and (max-width:850px) {
+            .mobile-phone {
+                display: block;
+            }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5"
+        style="background: linear-gradient(to left, rgb(214, 212, 212), #15233C);">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="m-0">
+                <img class="img-fluid me-3" src="Corniche You Name it, We do it”[1].png" alt="Corniche"
+                    style="width: 100px; height:100px;">
+            </h1>
+        </a>
+        <a class="mobile-phone" href="contact.html">
+            <button style="color: white ; padding: .5rem ; border-radius: 20px; border: none;"
+                class="mobile-phone btn-primary">Contact-us</button>
+            <!-- <img src="img/index/call.png" alt=""> -->
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="service.html" class="nav-item nav-link">Our Services</a>
+                <a href="trends.html" class="nav-item nav-link">Blogs</a>
+
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="team.html" class="dropdown-item">Team Members</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact Us</a> -->
+            </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
+
+    </nav>
+    <style>
+        .service-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .image-box:hover img,
+        .image-box.show img {
+            opacity: 0.3;
+        }
+
+        .image-box:hover .content,
+        .image-box.show .content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-box h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-box p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-box {
+                height: 220px;
+            }
+
+            .image-box h5 {
+                font-size: 1rem;
+            }
+
+            .image-box p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-box {
+                height: 200px;
+            }
+
+            .image-box .content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+
+<h1 style="display: flex; align-items: center; justify-content: center; margin: 2rem;">Exteriors </h1>
+<div class="service-wrapper">
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/1737955/pexels-photo-1737955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+        <div class="content">
+            <h5>Commercial </h5>
+            <p>Comprehensive commercial solutions tailored to enhance business environments with functionality,
+                innovation, and professional appeal.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/6957106/pexels-photo-6957106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Architecture & Interior">
+        <div class="content">
+            <h5>Residencial </h5>
+            <p>Personalized residential solutions designed to create comfortable, stylish, and functional living
+                spaces for every lifestyle.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/32047247/pexels-photo-32047247/free-photo-of-classic-european-architectural-facade-in-sunlight.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Civil Construction">
+        <div class="content">
+            <h5>Building facade </h5>
+            <p>
+                Modern building facades that blend architectural beauty, durability, and energy efficiency for
+                lasting first impressions. </p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/11580364/pexels-photo-11580364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="POP Ceiling & Kitchen">
+        <div class="content">
+            <h5>Foundation and structural work </h5>
+            <p>Robust foundation and structural work ensuring long-lasting stability, safety, and support for all
+                construction projects.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/6474192/pexels-photo-6474192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Home Automation">
+        <div class="content">
+            <h5>External masonry work </h5>
+            <p>Expert external masonry work delivering strength, durability, and aesthetic appeal for all building
+                exteriors.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/7598368/pexels-photo-7598368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Roof and terrace construction </h5>
+            <p>Reliable roof and terrace construction ensuring durability, weather resistance, and stylish designs
+                for every property.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/6032411/pexels-photo-6032411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>External finishing </h5>
+            <p>High-quality external finishing that enhances curb appeal, weatherproofs structures, and adds lasting
+                aesthetic value.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/11051736/pexels-photo-11051736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Doors,windows and openings </h5>
+            <p>Durable doors, windows, and openings designed for security, natural light, ventilation, and seamless
+                integration with interiors.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/7546608/pexels-photo-7546608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>External plumbing and drainage </h5>
+            <p>Efficient external plumbing and drainage systems ensuring proper water flow, waste management, and
+                long-term reliability.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/29238152/pexels-photo-29238152/free-photo-of-modern-office-workspace-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>External eletrical work </h5>
+            <p>Reliable external electrical work ensuring safe power distribution, efficient wiring, and optimal
+                performance for outdoor systems.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/7658758/pexels-photo-7658758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Paving and hardscape construction </h5>
+            <p>Durable paving and hardscape construction that enhances outdoor spaces with functional, aesthetically
+                pleasing, and long-lasting surfaces.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/13372718/pexels-photo-13372718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Boundary walls and gates
+            </h5>
+
+            <p>Sturdy boundary walls and gates providing security, privacy, and a strong visual appeal for your
+                property.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/833322/pexels-photo-833322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Utility area and external structures </h5>
+            <p>Efficient utility areas and external structures designed for functionality, storage, and seamless
+                integration with your space.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

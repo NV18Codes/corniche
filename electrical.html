@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Corniche-Infra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img\logo-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav bar start -->
+    <style>
+        .mobile-phone {
+            display: none;
+        }
+
+        @media screen and (max-width:850px) {
+            .mobile-phone {
+                display: block;
+            }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5"
+        style="background: linear-gradient(to left, rgb(214, 212, 212), #15233C);">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="m-0">
+                <img class="img-fluid me-3" src="Corniche You Name it, We do it”[1].png" alt="Corniche"
+                    style="width: 100px; height:100px;">
+            </h1>
+        </a>
+        <a class="mobile-phone" href="contact.html">
+            <button style="color: white ; padding: .5rem ; border-radius: 20px; border: none;"
+                class="mobile-phone btn-primary">Contact-us</button>
+            <!-- <img src="img/index/call.png" alt=""> -->
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="service.html" class="nav-item nav-link">Our Services</a>
+                <a href="trends.html" class="nav-item nav-link">Blogs</a>
+
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="team.html" class="dropdown-item">Team Members</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact Us</a> -->
+            </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
+
+    </nav>
+
+    <style>
+        .service-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .image-box:hover img,
+        .image-box.show img {
+            opacity: 0.3;
+        }
+
+        .image-box:hover .content,
+        .image-box.show .content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-box h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-box p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-box {
+                height: 220px;
+            }
+
+            .image-box h5 {
+                font-size: 1rem;
+            }
+
+            .image-box p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-box {
+                height: 200px;
+            }
+
+            .image-box .content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+
+<h1 style="display: flex; align-items: center; justify-content: center; margin: 2rem;">Eletricals</h1>
+<div class="service-wrapper">
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/16423104/pexels-photo-16423104/free-photo-of-smart-home-control.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+        <div class="content">
+            <h5>Home automation and smart systems </h5>
+            <p>Upgrade your lifestyle with home automation and smart systems for convenience, security, and energy
+                efficiency.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/8279235/pexels-photo-8279235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Architecture & Interior">
+        <div class="content">
+            <h5>HT/LT </h5>
+            <p>Professional installation of DG panels for uninterrupted power supply, enhanced efficiency, and
+                dependable energy backup systems.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/4320449/pexels-photo-4320449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Civil Construction">
+        <div class="content">
+            <h5>Installation of DG panels </h5>
+            <p>Ensure strength and stability with expert foundation and structural work built for safety and
+                longevity..</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/769059/pexels-photo-769059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="POP Ceiling & Kitchen">
+        <div class="content">
+            <h5>Lighting system </h5>
+            <p>Illuminate spaces with energy-efficient lighting systems designed for aesthetics, functionality, and
+                long-lasting performance..</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/30396288/pexels-photo-30396288/free-photo-of-winter-utility-pole-with-frosted-wires-against-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Home Automation">
+        <div class="content">
+            <h5>Wire and cabling</h5>
+            <p>High-quality wire and cabling solutions ensuring safe, reliable, and efficient electrical
+                connectivity across all applications..</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/5767595/pexels-photo-5767595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Switches and sockets</h5>
+            <p>Durable and stylish switches and sockets designed for seamless functionality, safety, and modern home
+                interiors.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/28368375/pexels-photo-28368375/free-photo-of-a-group-of-electrical-meters-on-a-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Electrical panels and distribution boards </h5>
+            <p>Efficient electrical panels and distribution boards ensuring safe, reliable power distribution for
+                residential and commercial spaces.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/27505236/pexels-photo-27505236/free-photo-of-webcam-security-camera-smart-home-automation-guard-system.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Safety systems </h5>
+            <p>Comprehensive safety systems offering advanced protection, monitoring, and control for enhanced
+                security and peace of mind.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>Power backup system </h5>
+            <p>
+                Reliable power backup systems ensuring uninterrupted energy supply during outages, maintaining
+                functionality and security at all times.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/6755087/pexels-photo-6755087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>
+                HVAC electrical connections </h5>
+            <p>Expert HVAC electrical connections ensuring optimal performance, energy efficiency, and seamless
+                integration with your system..</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/5691602/pexels-photo-5691602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>
+                Appliance wiring </h5>
+            <p>Precision appliance wiring ensures safe, efficient power delivery, optimizing performance and
+                reliability for household electronics.</p>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="https://images.pexels.com/photos/9875680/pexels-photo-9875680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+        <div class="content">
+            <h5>
+                Solar inverters </h5>
+            <p>Efficient solar inverters convert solar energy into reliable power, enhancing sustainability and
+                reducing energy costs.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

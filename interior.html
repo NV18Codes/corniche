@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Corniche-Infra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img\logo-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav bar start -->
+    <style>
+        .mobile-phone {
+            display: none;
+        }
+
+        @media screen and (max-width:850px) {
+            .mobile-phone {
+                display: block;
+            }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5"
+        style="background: linear-gradient(to left, rgb(214, 212, 212), #15233C);">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="m-0">
+                <img class="img-fluid me-3" src="Corniche You Name it, We do it”[1].png" alt="Corniche"
+                    style="width: 100px; height:100px;">
+            </h1>
+        </a>
+        <a class="mobile-phone" href="contact.html">
+            <button style="color: white ; padding: .5rem ; border-radius: 20px; border: none;"
+                class="mobile-phone btn-primary">Contact-us</button>
+            <!-- <img src="img/index/call.png" alt=""> -->
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="service.html" class="nav-item nav-link">Our Services</a>
+                <a href="trends.html" class="nav-item nav-link">Blogs</a>
+
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="team.html" class="dropdown-item">Team Members</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact Us</a> -->
+            </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
+
+    </nav>
+    <style>
+        .service-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.85);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .image-box:hover img,
+        .image-box.show img {
+            opacity: 0.3;
+        }
+
+        .image-box:hover .content,
+        .image-box.show .content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-box h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-box p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-box {
+                height: 220px;
+            }
+
+            .image-box h5 {
+                font-size: 1rem;
+            }
+
+            .image-box p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-box {
+                height: 200px;
+            }
+
+            .image-box .content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+    <h1 style="display: flex; align-items: center; justify-content: center; margin: 2rem ;">Interior </h1>
+    <div class="service-wrapper">
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/7750094/pexels-photo-7750094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Commercial interior </h5>
+                <p>Innovative commercial interior designs that reflect your brand, boost functionality, and inspire
+                    productivity and growth.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/6957106/pexels-photo-6957106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Residencial interior </h5>
+                <p>Elegant residential interior designs tailored to reflect your lifestyle, ensuring comfort,
+                    functionality, and aesthetic appeal.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Modular kitchen </h5>
+                <p>Modern modular kitchens designed for efficiency, style, and seamless organization to elevate your
+                    cooking experience.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/8961300/pexels-photo-8961300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Space planning and layout design </h5>
+                <p>Strategic space planning and layout design that maximize functionality, flow, and aesthetics in every
+                    environment.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>False ceiling and POP works </h5>
+                <p>Stylish false ceiling and POP works that enhance ambiance, conceal utilities, and add architectural
+                    elegance.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Flooring </h5>
+                <p>Premium flooring solutions that combine durability, style, and comfort for a flawless finish in any
+                    space.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/5798972/pexels-photo-5798972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Turnkey Construction">
+            <div class="content">
+                <h5>Wall treatment </h5>
+                <p>Transform your walls with creative wall treatments that add texture, color, and style to any room..
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/323645/pexels-photo-323645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Architecture & Interior">
+            <div class="content">
+                <h5>Furniture design </h5>
+                <p>Custom furniture design that blends functionality, style, and comfort to enhance the aesthetic of any
+                    space.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/8092384/pexels-photo-8092384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Civil Construction">
+            <div class="content">
+                <h5>Lighting design and fixture </h5>
+                <p>Creative lighting design and fixtures that elevate ambiance, functionality, and style in every
+                    interior space.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/8143713/pexels-photo-8143713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="POP Ceiling & Kitchen">
+            <div class="content">
+                <h5>Bathroom interiors </h5>
+                <p>Transform your bathroom with modern, stylish interiors that combine functionality, luxury, and
+                    comfort seamlessly.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/4030028/pexels-photo-4030028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Home Automation">
+            <div class="content">
+                <h5>Window treatments</h5>
+                <p>Enhance privacy and style with custom window treatments that offer functionality, elegance, and light
+                    control.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/5691541/pexels-photo-5691541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+            <div class="content">
+                <h5> Custom carpentry and woodwork   </h5>
+                <p>Tailored carpentry and woodwork solutions that bring craftsmanship, durability, and elegance to every
+                    space.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/2343465/pexels-photo-2343465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+            <div class="content">
+                <h5>Soft furnishings </h5>
+                <p>Elevate comfort and style with soft furnishings that add warmth, texture, and personality to
+                    interiors.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/18278210/pexels-photo-18278210/free-photo-of-sculpture-made-with-pottery-vases-in-art-gallery.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+            <div class="content">
+                <h5>Decore and styling </h5>
+                <p>Transform your space with expert decor and styling, creating a harmonious blend of beauty and
+                    functionality.</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/8442105/pexels-photo-8442105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lift & HVAC">
+            <div class="content">
+                <h5>Technology integration </h5>
+                <p>Seamlessly integrate advanced technology into your space, enhancing convenience, efficiency, and
+                    modern functionality.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
